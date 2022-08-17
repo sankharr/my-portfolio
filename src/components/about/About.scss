@@ -1,0 +1,67 @@
+// $mask-gradient: radial-gradient(
+//   ellipse at 50% 45%,
+//   rgb(0, 0, 0) 10%,
+//   transparent 60%
+// );
+
+$mask-gradient: radial-gradient(
+    circle at 50% 45%,
+    rgb(0, 0, 0) 10%,
+    transparent 60%
+  ),
+  radial-gradient(ellipse at 49% 33%, rgb(0, 0, 0) 0%, transparent 30%)
+  ;
+// linear-gradient(to left, transparent, black 100%);
+// linear-gradient(to right, transparent 80%, black 100%);
+
+// $mask-gradient2: radial-gradient(ellipse at top, black 0%, transparent 60%),
+//   radial-gradient(ellipse at bottom, black 0%, transparent 60%);
+
+.About {
+  display: flex;
+    // border: 1px dotted red;
+}
+
+.About__leftSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  //   border: 2px dotted yellow;
+  width: 50%;
+  height: 90vh;
+  //   height: fit-content;
+  img {
+    // width: 90%;
+    height: 80%;
+    -webkit-mask-image: $mask-gradient;
+    mask-image: $mask-gradient;
+    filter: brightness(0.5);
+    // mask-position: 50% -20%;
+    // border: 2px dotted rgb(255, 0, 191);
+    // -webkit-mask-image: $mask-gradient2;
+    // mask-image: $mask-gradient2;
+    // background: radial-gradient(ellipse at top, black, transparent),
+    //   radial-gradient(ellipse at bottom, black, transparent);
+  }
+}
+
+.About__rightSection {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-grow: 1;
+  justify-content: center;
+  padding-left: 2rem;
+//   border: 1px solid wheat;
+}
+
+.About__smallText {
+    font-size: 1.5rem;
+
+}
+
+.About__largeText {
+    font-size: 2.5rem;
+    padding: 1rem 0;
+    font-weight: bold;
+}

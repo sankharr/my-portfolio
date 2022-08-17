@@ -1,5 +1,5 @@
 .MovingStripes {
-    animation: theme 21s linear infinite;
+    animation: theme 2s linear infinite;
     
     &:after,
     &:before {
@@ -13,7 +13,7 @@
         width: 100vmax;
         height: 100vmax;
         background: rgba(0, 0, 0, 0.097);
-        animation: background 90s linear infinite;
+        animation: background 30s linear infinite;
     }
 
     &:after {
@@ -22,7 +22,7 @@
 
     &:before {
         right: 15vw;
-        animation-delay: -30s;
+        animation-delay: -20s;
         animation-direction: reverse;
     }
 }
