@@ -1,22 +1,24 @@
 .Header {
-    // position: sticky;
-    display: flex;
-    // justify-content: flex-end;
-    align-items: center;
-    // border: 1px dashed lawngreen;
-    padding: 1rem;
-    font-family: 'Cairo', Arial, Helvetica, sans-serif;
+//   position: fixed;
+  display: flex;
+  // justify-content: flex-end;
+  align-items: center;
+//   border: 1px dashed lawngreen;
+  padding: 1rem;
+  font-family: "Cairo", Arial, Helvetica, sans-serif;
+//   width: 80%;
+//   background-color:#021b37;
 }
 
 .Header__logo {
-    flex-grow: 1;
-    font-weight: bolder;
-    text-transform: uppercase;
-    font-size: 1.5em;
-    font-family: 'Alice';
+  flex-grow: 1;
+  font-weight: bolder;
+  text-transform: uppercase;
+  font-size: 1.5em;
+  font-family: "Alice";
 }
 
 .Header__navItem {
-    margin: 0 1rem;
-    text-transform: uppercase;
+  margin: 0 1rem;
+  text-transform: uppercase;
 }

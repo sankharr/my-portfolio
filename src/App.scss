@@ -8,8 +8,9 @@ $gradientConstantPart2: circle at 50% 25%, $gradient-from-color 0%, $gradient-to
     // height: max-content;
     // margin-left: 10%;
     // margin-right: 10%;
-    border-left: 1px solid black;
-    border-right: 1px solid black;
+    // border-left: 1px solid black;
+    // border-right: 1px solid black;
+    
 }
 
 .gradient__bg {
@@ -33,7 +34,7 @@ $gradientConstantPart2: circle at 50% 25%, $gradient-from-color 0%, $gradient-to
   .gradient__bg2 {
     position: relative;
     z-index: 2;
-    background-size: auto;
+    background-size: contain;
     background-position: center;
     background:-moz-radial-gradient($gradientConstantPart2);
   
