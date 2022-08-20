@@ -1,0 +1,209 @@
+.Projects {
+  border: 2px solid blue;
+  display: flex;
+  flex-direction: column;
+  padding: 5rem 0;
+}
+
+.Projects__title {
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+.Projects__card {
+  position: relative;
+  width: 320px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px 30px;
+  transition: 0.5s;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50px;
+    width: 50%;
+    height: 100%;
+    background: #fff;
+    border-radius: 8px;
+    transform: skewX(15deg);
+    transition: 0.5s;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50px;
+    width: 50%;
+    height: 100%;
+    background: #fff;
+    border-radius: 8px;
+    transform: skewX(15deg);
+    transition: 0.5s;
+    filter: blur(30px);
+  }
+
+  &:hover {
+    &::before, &::after{
+        transform: skewX(0deg);
+        left: 20px;
+        width: calc(100% - 90px);
+    }
+
+    span::before {
+        top: -50px;
+        left: 50px;
+        width: 100px;
+        height: 100px;
+        opacity: 1;
+    }
+  }
+
+  &:nth-child(2) {
+    &::before, &::after {
+        background: linear-gradient(315deg, #ffbc00, #ff0058);
+        // border: 5px solid red;
+    }
+  }
+
+  &:nth-child(3) {
+    &::before, &::after {
+        background: linear-gradient(315deg, #03a9f4, #ff0058);
+        // border: 5px solid red;
+    }
+  }
+
+  &:nth-child(4) {
+    &::before, &::after {
+        background: linear-gradient(315deg, #4dff03, #00d0ff);
+        // border: 5px solid red;
+    }
+  }
+
+  span {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 50;
+    pointer-events: none;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 8px;
+        background: rgba(255,255,255,0.1);
+        backdrop-filter: blur(10px);
+        opacity: 0;
+        transition: 0.5s;
+        animation: animate 2s linear infinite;
+
+    }
+  }
+}
+
+@keyframes animate {
+    0%, 100% {
+        transform: translateY(10px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+// .Projects__card {}
+
+// ################################### OLD ##################################################
+
+// .Projects__cardContainer:nth-child(even){
+//     position: relative;
+//     display: flex;
+//     margin: 3rem 0;
+//     transition: 0.5s;
+
+//     &:hover {
+
+//         .Projects__card {
+//             width: 70%;
+//         }
+//         .Projects__cardTitle{
+//             font-size: 4rem;
+//             // justify-content: center;
+//             align-items: center;
+//             transform: translateX(30rem);
+//             top: 35%;
+//             height: 5rem;
+//       }
+//     }
+// }
+
+// .Projects__cardContainer:nth-child(odd){
+//     position: relative;
+//     display: flex;
+//     // border: 2px solid red;
+//     margin: 3rem 0;
+//     transition: 0.5s;
+
+//     &:hover {
+
+//         .Projects__card {
+//             width: 70%;
+//         }
+//         .Projects__cardTitle{
+//             font-size: 4rem;
+//             // justify-content: center;
+//             align-items: center;
+//             transform: translateX(30rem);
+//             top: 35%;
+//             height: 3rem;
+//       }
+//     }
+// }
+
+// .Projects__card {
+//     // position: absolute;
+//     display: flex;
+//     //   border: 5px dotted red;
+//     width: 20rem;
+//     height: 20rem;
+//     border-radius: 10rem;
+//     background: radial-gradient(circle at 50% 50%, #0CBABA ,#380036 );
+
+//     z-index: -1;
+//     transition: 0.5s;
+// }
+
+// .Projects__cardTitle {
+//     border: 3px solid white;
+//     color: black;
+//     position: absolute;
+//     display: flex;
+//     align-items: center;
+//     justify-items: center;
+//     // text-align: center;
+//     margin-top: auto;
+//     margin-bottom: auto;
+
+//     // justify-content: flex-end;
+//     top: 30%;
+//     font-size: 6rem;
+//     margin: 0 0 0 6rem;
+//     transition: 0.5s;
+//     z-index: 5;
+//     height: 6rem;
+//     background-color: rgb(255, 255, 255);
+//     padding: 1rem 4rem;
+//     border-radius: 5rem;
+//     opacity: 0.8;
+// }

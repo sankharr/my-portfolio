@@ -7,11 +7,11 @@ import "./TechStack.scss";
 export const TechStack = () => {
   return (
     <div className="TechStack">
-      <div className="TechStack__title">Technical Exposure</div>
+      <div className="TechStack__title">Technical Exposure </div>
       <div className="TechStack__container">
         <div className="TechStack__card marginRight">
           <div className="TechStack__cardContent">
-            <div className="TechStack__cardTitle">Frontend</div>
+            <div className="TechStack__cardTitle">Frontend <br /> <span style={{color: 'red'}}>Animated Underline T.D.</span></div>
             <div className="TechStack__listItem">React</div>
             <div className="TechStack__listItem">HTML</div>
             <div className="TechStack__listItem">CSS</div>

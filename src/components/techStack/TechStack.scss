@@ -5,32 +5,32 @@ $gradientConstantPart: circle at 3% 25%, $gradient-from-color 0%,
 $gradientConstantPart2: circle at 50% 25%, $gradient-from-color 0%,
   $gradient-to-color 75%;
 
-.gradient__bg2 {
-  position: relative;
-  z-index: 2;
-  background-size: contain;
-  background-position: center;
-  background: -moz-radial-gradient($gradientConstantPart2);
+// .gradient__bg2 {
+//   position: relative;
+//   z-index: 2;
+//   background-size: contain;
+//   background-position: center;
+//   background: -moz-radial-gradient($gradientConstantPart2);
 
-  /* safari 5.1+,chrome 10+ */
-  background: -webkit-radial-gradient($gradientConstantPart2);
+//   /* safari 5.1+,chrome 10+ */
+//   background: -webkit-radial-gradient($gradientConstantPart2);
 
-  /* opera 11.10+ */
-  background: -o-radial-gradient($gradientConstantPart2);
+//   /* opera 11.10+ */
+//   background: -o-radial-gradient($gradientConstantPart2);
 
-  /* ie 10+ */
-  background: -ms-radial-gradient($gradientConstantPart2);
+//   /* ie 10+ */
+//   background: -ms-radial-gradient($gradientConstantPart2);
 
-  /* global 92%+ browsers support */
-  background: radial-gradient($gradientConstantPart2);
-}
+//   /* global 92%+ browsers support */
+//   background: radial-gradient($gradientConstantPart2);
+// }
 
 .TechStack {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-bottom: 5rem;
+  padding: 5rem 0 10rem;
 }
 
 .TechStack__title {
