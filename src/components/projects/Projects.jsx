@@ -44,10 +44,10 @@ const ProjectCard = ({
   );
 };
 
-export const Projects = () => {
+export const Projects = ({refHook}) => {
   return (
-    <div className="Projects">
-      <div className="Projects__title">Recent Work</div>
+    <div className="Projects" ref={refHook}>
+      <div className="Projects__title">Projects</div>
       <div className="Projects__cardContainer">
         <ProjectCard
           title="Personal Portfolio"

@@ -1,0 +1,43 @@
+.Footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+    
+    p {
+        padding: 2rem 0 0;
+    }
+}
+
+.Footer__title {
+    font-size: 2rem;
+}
+
+.Footer__contactDetails {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Footer__contactDetailItem {
+    display: flex;
+    margin: 2rem 1rem 2rem;
+    align-items: center;
+
+    span {
+        margin: 0 0.5rem;
+    }
+}
+
+.Footer__linkIcon {
+    font-size: 1.5rem;
+    color: white;
+    margin: 1rem 1rem;
+    transition: 0.2s;
+
+    &:hover {
+        transform: scale(1.3);
+        color: rgb(57, 139, 233);
+    }
+}

@@ -5,9 +5,9 @@ import Tilt from "react-vanilla-tilt";
 // styling
 import "./Profile.scss";
 
-export const Profile = () => {
+export const Profile = ({ refHook }) => {
   return (
-    <div className="Profile">
+    <div className="Profile" ref={refHook}>
       {/* <Tilt className="Profile__card" options={{}}> */}
         <div className="Profile__card">
           <div className="Profile__cardTitle">Education</div>
