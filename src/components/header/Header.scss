@@ -1,7 +1,7 @@
 .Header {
   //   position: fixed;
   display: flex;
-  // justify-content: flex-end;
+  justify-content: center;
   align-items: center;
   //   border: 1px dashed lawngreen;
   padding: 1rem 0;
@@ -18,12 +18,18 @@
   font-family: "Alice";
 }
 
+.flexGrow {
+  flex-grow: 1;
+  display: hidden;
+}
+
 .Header__navItem {
   position: relative;
   margin: 0 0.5rem;
   text-transform: uppercase;
   overflow: hidden;
   padding: 0.25rem 1rem;
+  cursor: pointer;
 
   span {
     transition: 0.5s;
@@ -74,6 +80,19 @@
       }
     }
   }
+}
+
+.rborder {
+    border: 1px solid white;
+    border-radius: 2rem;
+    transition: 0.2s;
+
+    &:hover {
+        background: #1779ff;
+        color: white;
+        border: none;
+        transform: scale(1.1);
+    }
 }
 
 @keyframes animate1 {

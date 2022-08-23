@@ -19,13 +19,20 @@ const StyledButton = ({ text }) => {
 export const Header = () => {
   return (
     <div className="Header">
-      <div className="Header__logo">SRR</div>
-      <StyledButton text='About' />
-      <StyledButton text='Technical Exposure' />
-      <StyledButton text='Profile' />
-      <StyledButton text='Recent Work' />
-      <StyledButton text='Contact' />
-      <StyledButton text='Download CV' />
+      {/* <div className="Header__logo">SRR</div> */}
+      <StyledButton text="About" />
+      <StyledButton text="Technical Exposure" />
+      <StyledButton text="Profile" />
+      <StyledButton text="Recent Work" />
+      <StyledButton text="Contact" />
+
+      <div className="Header__navItem flexGrow">
+        <div className="Header__navItemContent"></div>
+      </div>
+
+      <div className="Header__navItem rborder">
+        <div className="Header__navItemContent">Download CV</div>
+      </div>
     </div>
   );
 };
