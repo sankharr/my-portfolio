@@ -37,12 +37,6 @@ $mask-gradient: radial-gradient(
     -webkit-mask-image: $mask-gradient;
     mask-image: $mask-gradient;
     filter: brightness(0.5);
-    // mask-position: 50% -20%;
-    // border: 2px dotted rgb(255, 0, 191);
-    // -webkit-mask-image: $mask-gradient2;
-    // mask-image: $mask-gradient2;
-    // background: radial-gradient(ellipse at top, black, transparent),
-    //   radial-gradient(ellipse at bottom, black, transparent);
   }
 }
 
@@ -65,4 +59,44 @@ $mask-gradient: radial-gradient(
     font-size: 2.5rem;
     padding: 1rem 0;
     font-weight: bold;
+}
+
+@media only screen and (max-width: 600px) {
+
+    
+    .About__rightSection {
+        margin-left: -3rem;
+        // padding-right: 4rem;
+    }
+
+    .About__largeText {
+        line-height: 3rem;
+    }
+
+    .About__smallText {
+        padding: 2rem 0;
+        line-height: 2rem;
+    }
+} 
+
+@media only screen and (min-width: 768px) {
+
+    .About__leftSection {
+        img {
+            height: 60%;
+        }
+    }
+    .About__rightSection {
+        margin-left: 2rem;
+        // padding-right: 4rem;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+
+    .About__leftSection {
+        img {
+            height: 80%;
+        }
+    }
 }

@@ -29,7 +29,7 @@ export const Profile = ({ refHook }) => {
             </div>
             <div className="Profile__listItemContent">
               Mathematics – A | Physics – B | IT - B <br />
-              District Rank – 07 | Country Rank – 18 | Z-Score – 2.055
+              District Rank – 07 | Country Rank – 18 
             </div>
           </div>
         </div>

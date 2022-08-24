@@ -9,7 +9,7 @@ export const TechStack = ({ refHook }) => {
     <div className="TechStack" ref={refHook}>
       <div className="TechStack__title">Technical Exposure </div>
       <div className="TechStack__container">
-        <div className="TechStack__card marginRight">
+        <div className="TechStack__card ">
           <div className="TechStack__cardContent">
             <div className="TechStack__cardTitle">Frontend</div>
             <div className="TechStack__listItem">React</div>
@@ -18,7 +18,7 @@ export const TechStack = ({ refHook }) => {
             <div className="TechStack__listItem">Javascript</div>
           </div>
         </div>
-        <div className="TechStack__card marginRight">
+        <div className="TechStack__card ">
           <div className="TechStack__cardContent">
             <div className="TechStack__cardTitle">Backend</div>
             <div className="TechStack__listItem">NodeJS</div>

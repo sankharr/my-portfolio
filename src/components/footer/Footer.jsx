@@ -27,16 +27,16 @@ export const Footer = ({ refHook }) => {
       <div className="Foooter__subTitle">Find me on</div>
       <div className="Footer__externalLinks">
         <a target="_blank" href="https://www.linkedin.com/in/sankha-rathnayake/">
-          <AiFillLinkedin className="Footer__linkIcon" />{" "}
+          <AiFillLinkedin className="Footer__linkIcon" />
         </a>
         <a target="_blank" href="https://github.com/sankharr">
-          <FaGithub className="Footer__linkIcon" />{" "}
+          <FaGithub className="Footer__linkIcon" />
         </a>
         <a target="_blank" href="https://stackoverflow.com/users/7911731/sankha-rathnayake">
-          <BsStackOverflow className="Footer__linkIcon" />{" "}
+          <BsStackOverflow className="Footer__linkIcon" />
         </a>
         <a target="_blank" href="https://www.hackerrank.com/sankharr">
-          <FaHackerrank className="Footer__linkIcon" />{" "}
+          <FaHackerrank className="Footer__linkIcon" />
         </a>
       </div>
       <p>&copy; 2022 Developed by Sankha Rathnayake</p>

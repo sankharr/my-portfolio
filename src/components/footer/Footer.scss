@@ -16,14 +16,19 @@
 
 .Footer__contactDetails {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: 5rem 0 4rem;
+    // border: 2px solid white;
 }
 
 .Footer__contactDetailItem {
     display: flex;
-    margin: 2rem 1rem 2rem;
+    margin: 0rem 1rem;
     align-items: center;
+    width: 15rem;
+    justify-content: center;
 
     span {
         margin: 0 0.5rem;
@@ -39,5 +44,28 @@
     &:hover {
         transform: scale(1.3);
         color: rgb(57, 139, 233);
+    }
+}
+
+@media only screen and (max-width: 600px) {
+
+    .Footer {
+        // padding-left: 2.5rem;
+    }
+
+    .Footer__title {
+        margin: 0 0 4rem;
+    }
+    .Footer__contactDetails {
+        flex-direction: column;
+        // align-items: center;
+        // justify-content: center;
+    }
+    .Footer__contactDetailItem {
+        margin: 0.25rem 0
+    }
+
+    .Foooter__subTitle {
+        margin: 3rem 0 0.5rem;
     }
 }
