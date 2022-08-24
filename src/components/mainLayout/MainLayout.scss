@@ -52,6 +52,11 @@
   transition: 0.2s;
   user-select: none;
 
+  a {
+    color: white;
+    text-decoration: none;
+  }
+
   &:hover {
     background: #1779ff;
     color: white;

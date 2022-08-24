@@ -4,7 +4,7 @@ import React, { useState, useRef, useEffect } from "react";
 // styling
 import "./MainLayout.scss";
 import { HiViewList } from "react-icons/hi";
-import { AiOutlineClose } from 'react-icons/ai';
+import { AiOutlineClose } from "react-icons/ai";
 
 // components
 import { Header } from "../header/Header";
@@ -14,6 +14,9 @@ import { Profile } from "../profile/Profile";
 import { Projects } from "../projects/Projects";
 import { Footer } from "../footer/Footer";
 import useWindowDimensions from "../hooks/useWindowDimensions";
+
+// file
+import downloadFile from "../../assets/Sankha_Rathnayake_CV.pdf";
 
 const StyledBorders = ({ text }) => {
   return (
@@ -29,7 +32,7 @@ const StyledBorders = ({ text }) => {
 
 export const MainLayout = () => {
   const [isNavExpanded, setIsNavExpanded] = useState("");
-  const [buttonClicked, setButtonClicked] = useState(false)
+  const [buttonClicked, setButtonClicked] = useState(false);
   const techStackSection = useRef(null);
   const profileSection = useRef(null);
   const projectsSection = useRef(null);
@@ -39,12 +42,11 @@ export const MainLayout = () => {
   useEffect(() => {
     // console.log("width - ",width)
     if (window.innerWidth <= 550) {
-        setIsNavExpanded("--hide")
+      setIsNavExpanded("--hide");
+    } else {
+      setIsNavExpanded("");
     }
-    else {
-        setIsNavExpanded("")
-    }
-  },[width])
+  }, [width]);
 
   const scrollSection = (section) => {
     // console.log("function fired up")
@@ -60,37 +62,31 @@ export const MainLayout = () => {
         <HiViewList
           className="Header__listIcon"
           onClick={() => {
-            
-            if(isNavExpanded == ""){
-                console.log("button clicked - ", isNavExpanded);
-                setIsNavExpanded("--hide");
+            if (isNavExpanded == "") {
+              console.log("button clicked - ", isNavExpanded);
+              setIsNavExpanded("--hide");
+            } else {
+              console.log("button clicked - ", isNavExpanded);
+              setIsNavExpanded("");
             }
-            else{
-                console.log("button clicked - ", isNavExpanded);
-                setIsNavExpanded("")
-            }
-            
           }}
         />
-        {!isNavExpanded && <AiOutlineClose
-          className="Header__closeIcon"
-          onClick={() => {
-            
-            if(isNavExpanded == ""){
+        {!isNavExpanded && (
+          <AiOutlineClose
+            className="Header__closeIcon"
+            onClick={() => {
+              if (isNavExpanded == "") {
                 console.log("button clicked - ", isNavExpanded);
                 setIsNavExpanded("--hide");
-            }
-            else{
+              } else {
                 console.log("button clicked - ", isNavExpanded);
-                setIsNavExpanded("")
-            }
-            
-          }}
-        />}
+                setIsNavExpanded("");
+              }
+            }}
+          />
+        )}
 
-        <div
-          className={`Header__responsiveNavItemsSection${isNavExpanded}`}
-        >
+        <div className={`Header__responsiveNavItemsSection${isNavExpanded}`}>
           <div
             className="Header__navItem"
             onClick={() => scrollSection(techStackSection)}
@@ -122,7 +118,13 @@ export const MainLayout = () => {
         </div>
 
         <div className="Header__downloadCV">
-          <div className="Header__navItemContent">Download CV</div>
+          <a
+            href={downloadFile}
+            download="Sankha_Rathnayake_CV"
+            target="_blank"
+          >
+            <div className="Header__navItemContent">Download CV</div>
+          </a>
         </div>
       </div>
 
