@@ -4,7 +4,7 @@ import React from "react";
 // styling
 import "./TechStack.scss";
 
-export const TechStack = ({ refHook }) => {
+const TechStack = ({ refHook }) => {
   return (
     <div className="TechStack" ref={refHook}>
       <div className="TechStack__title">Technical Exposure </div>
@@ -42,3 +42,5 @@ export const TechStack = ({ refHook }) => {
     </div>
   );
 };
+
+export default React.memo(TechStack);

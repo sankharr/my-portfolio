@@ -7,12 +7,11 @@ import { HiViewList } from "react-icons/hi";
 import { AiOutlineClose } from "react-icons/ai";
 
 // components
-import { Header } from "../header/Header";
-import { About } from "../about/About";
-import { TechStack } from "../techStack/TechStack";
-import { Profile } from "../profile/Profile";
-import { Projects } from "../projects/Projects";
-import { Footer } from "../footer/Footer";
+import About from "../about/About";
+import TechStack from "../techStack/TechStack";
+import Profile from "../profile/Profile";
+import Projects from "../projects/Projects";
+import Footer from "../footer/Footer";
 import useWindowDimensions from "../hooks/useWindowDimensions";
 
 // file
@@ -30,9 +29,8 @@ const StyledBorders = ({ text }) => {
   );
 };
 
-export const MainLayout = () => {
+const MainLayout = () => {
   const [isNavExpanded, setIsNavExpanded] = useState("");
-  const [buttonClicked, setButtonClicked] = useState(false);
   const techStackSection = useRef(null);
   const profileSection = useRef(null);
   const projectsSection = useRef(null);
@@ -62,7 +60,7 @@ export const MainLayout = () => {
         <HiViewList
           className="Header__listIcon"
           onClick={() => {
-            if (isNavExpanded == "") {
+            if (isNavExpanded === "") {
               setIsNavExpanded("--hide");
             } else {
               setIsNavExpanded("");
@@ -73,7 +71,7 @@ export const MainLayout = () => {
           <AiOutlineClose
             className="Header__closeIcon"
             onClick={() => {
-              if (isNavExpanded == "") {
+              if (isNavExpanded === "") {
                 setIsNavExpanded("--hide");
               } else {
                 setIsNavExpanded("");
@@ -118,6 +116,7 @@ export const MainLayout = () => {
             href={downloadFile}
             download="Sankha_Rathnayake_Resume"
             target="_blank"
+            rel="noreferrer"
           >
             <div className="Header__navItemContent">Download Resume</div>
           </a>
@@ -132,3 +131,5 @@ export const MainLayout = () => {
     </div>
   );
 };
+
+export default React.memo(MainLayout);

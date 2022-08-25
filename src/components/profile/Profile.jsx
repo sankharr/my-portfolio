@@ -1,11 +1,10 @@
 // packages
 import React from "react";
-import Tilt from "react-vanilla-tilt";
 
 // styling
 import "./Profile.scss";
 
-export const Profile = ({ refHook }) => {
+const Profile = ({ refHook }) => {
   return (
     <div className="Profile" ref={refHook}>
       {/* <Tilt className="Profile__card" options={{}}> */}
@@ -100,3 +99,5 @@ export const Profile = ({ refHook }) => {
     </div>
   );
 };
+
+export default React.memo(Profile);

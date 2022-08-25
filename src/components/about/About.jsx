@@ -5,14 +5,13 @@ import React from 'react'
 import './About.scss'
 
 // assets
-// import image from '../../assets/propic_new_transparentBG.png';
 import image from '../../assets/propic_new.jpg';
 
-export const About = () => {
+const About = () => {
   return (
     <div className='About'>
         <div className='About__leftSection'>
-            <img src={image} />
+            <img src={image} alt=""/>
         </div>
         <div className='About__rightSection'>
             <div className='About__smallText'>
@@ -28,3 +27,5 @@ export const About = () => {
     </div>
   )
 }
+
+export default React.memo(About);

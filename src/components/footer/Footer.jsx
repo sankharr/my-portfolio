@@ -10,7 +10,7 @@ import { FaGithub, FaHackerrank } from "react-icons/fa";
 import { BsStackOverflow } from "react-icons/bs";
 
 
-export const Footer = ({ refHook }) => {
+const Footer = ({ refHook }) => {
   return (
     <div className="Footer" ref={refHook}>
       <div className="Footer__title">Contact</div>
@@ -26,16 +26,16 @@ export const Footer = ({ refHook }) => {
       </div>
       <div className="Foooter__subTitle">Find me on</div>
       <div className="Footer__externalLinks">
-        <a target="_blank" href="https://www.linkedin.com/in/sankha-rathnayake/">
+        <a target="_blank" href="https://www.linkedin.com/in/sankha-rathnayake/" rel="noreferrer">
           <AiFillLinkedin className="Footer__linkIcon" />
         </a>
-        <a target="_blank" href="https://github.com/sankharr">
+        <a target="_blank" href="https://github.com/sankharr" rel="noreferrer">
           <FaGithub className="Footer__linkIcon" />
         </a>
-        <a target="_blank" href="https://stackoverflow.com/users/7911731/sankha-rathnayake">
+        <a target="_blank" href="https://stackoverflow.com/users/7911731/sankha-rathnayake" rel="noreferrer">
           <BsStackOverflow className="Footer__linkIcon" />
         </a>
-        <a target="_blank" href="https://www.hackerrank.com/sankharr">
+        <a target="_blank" href="https://www.hackerrank.com/sankharr" rel="noreferrer">
           <FaHackerrank className="Footer__linkIcon" />
         </a>
       </div>
@@ -43,3 +43,5 @@ export const Footer = ({ refHook }) => {
     </div>
   );
 };
+
+export default React.memo(Footer)

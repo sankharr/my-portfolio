@@ -22,4 +22,4 @@ function useOutsideAlerter(ref) {
   }, [ref]);
 }
 
-export default useOutsideAlerter;
+export default React.memo(useOutsideAlerter);

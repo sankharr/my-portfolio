@@ -1,9 +1,10 @@
 // styling
-import './App.scss';
+import { memo } from "react";
+import "./App.scss";
 
 // components
-import MovingStripes from './components/background/MovingStripes';
-import { MainLayout } from './components/mainLayout/MainLayout';
+import MovingStripes from "./components/background/MovingStripes";
+import MainLayout from "./components/mainLayout/MainLayout";
 
 function App() {
   return (
@@ -14,4 +15,4 @@ function App() {
   );
 }
 
-export default App;
+export default memo(App);

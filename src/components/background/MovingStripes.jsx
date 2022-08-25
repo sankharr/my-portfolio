@@ -7,4 +7,4 @@ function MovingStripes() {
   )
 }
 
-export default MovingStripes
+export default React.memo(MovingStripes);
