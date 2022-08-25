@@ -22,7 +22,7 @@ export const About = () => {
                     Sankha Rathnayake
             </div>
             <div className='About__smallText'>
-                    Fullstack Developer
+                    Frontend Developer
             </div>
         </div>
     </div>

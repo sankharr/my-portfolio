@@ -16,7 +16,7 @@ import { Footer } from "../footer/Footer";
 import useWindowDimensions from "../hooks/useWindowDimensions";
 
 // file
-import downloadFile from "../../assets/Sankha_Rathnayake_CV.pdf";
+import downloadFile from "../../assets/Sankha_Rathnayake_Resume.pdf";
 
 const StyledBorders = ({ text }) => {
   return (
@@ -63,10 +63,8 @@ export const MainLayout = () => {
           className="Header__listIcon"
           onClick={() => {
             if (isNavExpanded == "") {
-              console.log("button clicked - ", isNavExpanded);
               setIsNavExpanded("--hide");
             } else {
-              console.log("button clicked - ", isNavExpanded);
               setIsNavExpanded("");
             }
           }}
@@ -76,10 +74,8 @@ export const MainLayout = () => {
             className="Header__closeIcon"
             onClick={() => {
               if (isNavExpanded == "") {
-                console.log("button clicked - ", isNavExpanded);
                 setIsNavExpanded("--hide");
               } else {
-                console.log("button clicked - ", isNavExpanded);
                 setIsNavExpanded("");
               }
             }}
@@ -120,10 +116,10 @@ export const MainLayout = () => {
         <div className="Header__downloadCV">
           <a
             href={downloadFile}
-            download="Sankha_Rathnayake_CV"
+            download="Sankha_Rathnayake_Resume"
             target="_blank"
           >
-            <div className="Header__navItemContent">Download CV</div>
+            <div className="Header__navItemContent">Download Resume</div>
           </a>
         </div>
       </div>

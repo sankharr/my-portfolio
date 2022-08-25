@@ -38,7 +38,7 @@ export const Profile = ({ refHook }) => {
         <div className="Profile__cardTitle">Experience</div>
         <div className="Profile__listItem">
           <div className="Profile__listItemTitle">
-            Full Stack Developer <span>(2021 – Present)</span>
+            Frontend Developer <span>(2021 – Present)</span>
           </div>
           <div className="Profile__listItemSubtitle">Freelance</div>
           <div className="Profile__listItemContent">
@@ -58,7 +58,7 @@ export const Profile = ({ refHook }) => {
 
         <div className="Profile__listItem">
           <div className="Profile__listItemTitle">
-            Associate Engineer <span>(2021/05 – )</span>
+            Associate Engineer <span>(2021/05 – 2022/05)</span>
           </div>
           <div className="Profile__listItemSubtitle">
             London Stock Exchange Group
