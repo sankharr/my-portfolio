@@ -4,6 +4,9 @@ import React from "react";
 // styling
 import "./Projects.scss";
 
+// hooks
+import useAnalyticsEventTracker from "../hooks/useAnalyticsEventTracker";
+
 // icons
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 
@@ -14,6 +17,7 @@ const ProjectCard = ({
   githubLink,
   hostedLink,
 }) => {
+  const gaEventTracker = useAnalyticsEventTracker("Projects");
   return (
     <div className="Projects__card">
       <span></span>
@@ -29,12 +33,22 @@ const ProjectCard = ({
         <div className="Projects__description">{description}</div>
         <div className="Projects__links">
           {githubLink && (
-            <a target="_blank" href={githubLink} rel="noreferrer">
+            <a
+              target="_blank"
+              href={githubLink}
+              rel="noreferrer"
+              onClick={() => gaEventTracker(`githubLink_${title}`)}
+            >
               <FaGithub className="Projects__linkIcon" />{" "}
             </a>
           )}
           {hostedLink && (
-            <a target="_blank" href={hostedLink} rel="noreferrer">
+            <a
+              target="_blank"
+              href={hostedLink}
+              rel="noreferrer"
+              onClick={() => gaEventTracker(`hostedLink_${title}`)}
+            >
               <FaExternalLinkAlt className="Projects__linkIcon" />{" "}
             </a>
           )}
@@ -44,7 +58,7 @@ const ProjectCard = ({
   );
 };
 
-const Projects = ({refHook}) => {
+const Projects = ({ refHook }) => {
   return (
     <div className="Projects" ref={refHook}>
       <div className="Projects__title">Projects</div>

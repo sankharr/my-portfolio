@@ -4,13 +4,16 @@ import React from "react";
 // styling
 import "./Footer.scss";
 
+// hooks
+import useAnalyticsEventTracker from "../hooks/useAnalyticsEventTracker";
+
 // icons
 import { AiTwotonePhone, AiOutlineMail, AiFillLinkedin } from "react-icons/ai";
 import { FaGithub, FaHackerrank } from "react-icons/fa";
 import { BsStackOverflow } from "react-icons/bs";
 
-
 const Footer = ({ refHook }) => {
+  const gaEventTracker = useAnalyticsEventTracker("Footer");
   return (
     <div className="Footer" ref={refHook}>
       <div className="Footer__title">Contact</div>
@@ -26,16 +29,31 @@ const Footer = ({ refHook }) => {
       </div>
       <div className="Foooter__subTitle">Find me on</div>
       <div className="Footer__externalLinks">
-        <a target="_blank" href="https://www.linkedin.com/in/sankha-rathnayake/" rel="noreferrer">
+        <a
+          target="_blank"
+          href="https://www.linkedin.com/in/sankha-rathnayake/"
+          rel="noreferrer"
+          onClick={()=>gaEventTracker('linkedin')}
+        >
           <AiFillLinkedin className="Footer__linkIcon" />
         </a>
-        <a target="_blank" href="https://github.com/sankharr" rel="noreferrer">
+        <a target="_blank" href="https://github.com/sankharr" rel="noreferrer" onClick={()=>gaEventTracker('githubProfile')}>
           <FaGithub className="Footer__linkIcon" />
         </a>
-        <a target="_blank" href="https://stackoverflow.com/users/7911731/sankha-rathnayake" rel="noreferrer">
+        <a
+          target="_blank"
+          href="https://stackoverflow.com/users/7911731/sankha-rathnayake"
+          rel="noreferrer"
+          onClick={()=>gaEventTracker('stackoverflow')}
+        >
           <BsStackOverflow className="Footer__linkIcon" />
         </a>
-        <a target="_blank" href="https://www.hackerrank.com/sankharr" rel="noreferrer">
+        <a
+          target="_blank"
+          href="https://www.hackerrank.com/sankharr"
+          rel="noreferrer"
+          onClick={()=>gaEventTracker('hackerrank')}
+        >
           <FaHackerrank className="Footer__linkIcon" />
         </a>
       </div>
@@ -44,4 +62,4 @@ const Footer = ({ refHook }) => {
   );
 };
 
-export default React.memo(Footer)
+export default React.memo(Footer);

@@ -13,6 +13,7 @@ import Profile from "../profile/Profile";
 import Projects from "../projects/Projects";
 import Footer from "../footer/Footer";
 import useWindowDimensions from "../hooks/useWindowDimensions";
+import useAnalyticsEventTracker from "../hooks/useAnalyticsEventTracker";
 
 // file
 import downloadFile from "../../assets/Sankha_Rathnayake_Resume.pdf";
@@ -36,6 +37,7 @@ const MainLayout = () => {
   const projectsSection = useRef(null);
   const contactSection = useRef(null);
   const { height, width } = useWindowDimensions();
+  const gaEventTracker = useAnalyticsEventTracker('Header');
 
   useEffect(() => {
     // console.log("width - ",width)
@@ -117,6 +119,7 @@ const MainLayout = () => {
             download="Sankha_Rathnayake_Resume"
             target="_blank"
             rel="noreferrer"
+            onClick={()=>gaEventTracker('downloadResume')}
           >
             <div className="Header__navItemContent">Download Resume</div>
           </a>
