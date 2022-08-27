@@ -20,6 +20,7 @@ $mask-gradient: radial-gradient(
 .About {
   display: flex;
   padding: 0rem 0 5rem;
+  user-select: none;
     // border: 1px dotted red;
 }
 

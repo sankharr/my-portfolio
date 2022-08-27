@@ -31,6 +31,7 @@ $gradientConstantPart2: circle at 50% 25%, $gradient-from-color 0%,
   justify-content: center;
   align-items: center;
   padding: 5rem 0 10rem;
+  user-select: none;
 }
 
 .TechStack__title {

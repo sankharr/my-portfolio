@@ -1,5 +1,5 @@
 // styling
-import { memo } from "react";
+import { memo, useEffect } from "react";
 import "./App.scss";
 import ReactGA from "react-ga";
 
@@ -8,8 +8,12 @@ import MovingStripes from "./components/background/MovingStripes";
 import MainLayout from "./components/mainLayout/MainLayout";
 
 function App() {
-  const TRACKING_ID = process.env.REACT_APP_TRACKING_ID;
-  ReactGA.initialize(TRACKING_ID);
+//   const TRACKING_ID = process.env.REACT_APP_TRACKING_ID;
+//   ReactGA.initialize(TRACKING_ID);
+
+  useEffect(() => {
+    // ReactGA.pageview('/');
+  },[])
   return (
     <div className="App gradient__bg2">
       <MovingStripes />

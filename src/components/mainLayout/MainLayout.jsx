@@ -40,7 +40,7 @@ const MainLayout = () => {
   const gaEventTracker = useAnalyticsEventTracker('Header');
 
   useEffect(() => {
-    // console.log("width - ",width)
+    console.log("width - ",width)
     if (window.innerWidth <= 550) {
       setIsNavExpanded("--hide");
     } else {
@@ -125,7 +125,7 @@ const MainLayout = () => {
           </a>
         </div>
       </div>
-
+{/* {height} */}
       <About />
       <TechStack refHook={techStackSection} />
       <Profile refHook={profileSection} />

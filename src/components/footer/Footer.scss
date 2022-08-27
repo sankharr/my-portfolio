@@ -7,11 +7,13 @@
     
     p {
         padding: 2rem 0 0;
+        user-select: none;
     }
 }
 
 .Footer__title {
     font-size: 2rem;
+    user-select: none;
 }
 
 .Footer__contactDetails {
@@ -33,6 +35,10 @@
     span {
         margin: 0 0.5rem;
     }
+}
+
+.Foooter__subTitle {
+    user-select: none;
 }
 
 .Footer__linkIcon {

@@ -10,7 +10,7 @@
   padding: 1rem 0;
   font-family: "Cairo", Arial, Helvetica, sans-serif;
   position: relative;
-  z-index: 20;
+  z-index: 80;
 }
 
 .Header__listIcon {
@@ -232,7 +232,9 @@
   }
 
   .Header__downloadCV {
+    // position: relative;
     margin-right: 1rem;
+    z-index: 600;
   }
 }
 
